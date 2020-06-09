@@ -1,0 +1,80 @@
+main
+  min-height: 68vh
+  display: flex
+  align-items: center
+  justify-content: center
+  .contenedor
+    width: 100%
+    min-height: 68vh
+    position: relative
+    overflow-x: hidden
+    div
+      display: inline-block
+      padding: 1rem
+      transition: left 1s linear, top 1s linear, opacity 1s linear, right 1s linear
+      opacity: 1
+      i
+        font-size: 10rem
+    .piedra
+      background-color: red
+      &.principal
+        position: absolute
+        left: 0
+        top: calc(50% - 12rem)
+      &.eleccion
+        left: 0!important
+        top: calc(50% - (12rem/2))
+      &.hide
+        opacity: 0
+        transition: opacity 1s linear
+      &.offscreen
+        transform: translateX(500%)
+    .papel
+      background-color: blue
+      &.principal
+        position: absolute
+        top: calc(50% - 12rem)
+      &.eleccion
+        left: 0!important
+        top: calc(50% - (12rem/2))
+      &.hide
+        opacity: 0
+        transition: opacity 1s linear
+      &.offscreen
+        transform: translateX(500%)
+    .tijera
+      background-color: green
+      &.principal
+        position: absolute
+        top: 55%
+      &.eleccion
+        left: 0!important
+        top: calc(50% - (12rem/2))
+      &.hide
+        opacity: 0
+        transition: opacity 1s linear
+      &.offscreen
+        transform: translateX(500%)
+    .eleccion-pc
+      display: flex
+      justify-content: center
+      align-items: center
+      position: absolute
+      right: 0
+      top: calc( 50% - (12rem/2) )
+      opacity: 0
+      transition: opacity 1s linear
+      background-color: #9c9c9c
+      width: 12rem
+      height: 12rem
+      z-index: -2000
+      &.espera
+        opacity: 1
+      div
+        opacity: 0
+        transition: opacity 1s linear
+        &.mostrar
+          opacity: 1
+
+
+    
